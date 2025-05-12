@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bappi Photography - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="your-photo.png" alt="Bappi Photography Logo" />
+                    <span class="logo-text">Bappi Photography</span> <!-- Added text beside the logo -->
+                </div>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="shape one"></div>
+    <div class="shape two"></div>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Bappi Photography</h1>
+            <p>Capture Your Moments with Professional Photography</p>
+            <a href="#categories" class="btn">View Categories</a>
+        </div>
+        <!-- Slideshow Images -->
+        <div class="slideshow-container">
+            <div class="slide fade">
+                <img src="slideshow/slide1.jpg" alt="Slide 1">
+            </div>
+            <div class="slide fade">
+                <img src="slideshow/slide2.jpg" alt="Slide 2">
+            </div>
+            <div class="slide fade">
+                <img src="slideshow/slide3.jpg" alt="Slide 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p style="max-width:800px; margin:auto; text-align:center;">I am Bappi, a passionate photographer with over
+                5 years of experience in capturing weddings, events, birthdays, and more. Every shot is carefully
+                crafted to ensure you have timeless memories.</p>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories">
+        <div class="container">
+            <h2 class="section-title">Categories</h2>
+            <div class="category-grid">
+                <div class="category-item">
+                    <a href="wedding-albums.html">
+                        <img src="Categories/wedding-category.jpg" alt="Wedding">
+                        <div class="overlay">
+                            <h3>Wedding</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="category-item">
+                    <a href="outdoor-albums.html">
+                        <img src="Categories/outdoor-category.jpg" alt="Outdoor">
+                        <div class="overlay">
+                            <h3>Outdoor</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="category-item">
+                    <a href="event-albums.html">
+                        <img src="Categories/event-category.jpg" alt="Event">
+                        <div class="overlay">
+                            <h3>Outdoor</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="category-item">
+                    <a href="birthday-albums.html">
+                        <img src="Categories/birthday-category.jpg" alt="birthday">
+                        <div class="overlay">
+                            <h3>Outdoor</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="category-item">
+                    <a href="others-albums.html">
+                        <img src="Categories/others-category.jpg" alt="Others">
+                        <div class="overlay">
+                            <h3>Others</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="social-links">
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/mhbappi05" target="_blank" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                    Instagram
+                </a>
+
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/mhbappi05" target="_blank" class="social-link">
+                    <i class="fab fa-facebook"></i>
+                    Facebook
+                </a>
+
+                <!-- Gmail (will show email address on click) -->
+                <a href="javascript:void(0);" class="social-link" onclick="toggleEmail()">
+                    <i class="fas fa-envelope"></i>
+                    Gmail
+                </a>
+                <div id="email" class="hidden-content">mhbappi05@gmail.com</div>
+
+                <!-- Phone (will show phone number on click) -->
+                <a href="javascript:void(0);" class="social-link" onclick="togglePhone()">
+                    <i class="fas fa-phone"></i>
+                    Phone
+                </a>
+                <div id="phone" class="hidden-content">01679861740</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Bappi Photography. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
