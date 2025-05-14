@@ -42,6 +42,11 @@ function toggleEmail() {
   email.style.display = (email.style.display === "block") ? "none" : "block";
 }
 
+function toggleWhatsapp() {
+  const whatsapp = document.getElementById("whatsapp");
+  whatsapp.style.display = (whatsapp.style.display === "block") ? "none" : "block";
+}
+
 function togglePhone() {
   const phone = document.getElementById("phone");
   phone.style.display = (phone.style.display === "block") ? "none" : "block";
