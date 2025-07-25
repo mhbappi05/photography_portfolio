@@ -113,12 +113,15 @@ nav ul li a:hover {
 
 
 .hero {
+  width: 99vw;
+  min-height: 400px;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background: url('slideshow/bappi-cover.jpg') center/cover no-repeat;
   position: relative;
+  overflow: hidden;
 }
 
 .hero::before {
@@ -178,6 +181,7 @@ nav ul li a:hover {
   width: 100%;
   height: 100%;
   z-index: 0; /* Slideshow goes behind the text */
+  overflow: hidden;
 }
 
 .slide {
@@ -185,6 +189,8 @@ nav ul li a:hover {
   position: absolute;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
 }
 
 .slide img {
@@ -202,6 +208,20 @@ nav ul li a:hover {
 @keyframes fadeOut {
   from { opacity: 1; }
   to { opacity: 0; }
+}
+
+/* --- RESPONSIVENESS --- */
+@media (max-width: 900px) {
+  .hero { height: 38vh; min-height: 240px; }
+  .slideshow-container { height: 100%; }
+}
+@media (max-width: 600px) {
+  .hero { height: 32vh; min-height: 170px; }
+  .slide img { min-height: 160px; }
+}
+@media (max-width: 480px) {
+  .hero { height: 26vh; min-height: 130px; }
+  .slide img { min-height: 110px; }
 }
 
 /* Optional: Add hover effect to icons if needed */
@@ -687,3 +707,14 @@ footer p {
     display: none;
   }
 }
+
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  pointer-events: none; /* Optional, disables clicks - may hurt UX */
+}
+

@@ -51,3 +51,18 @@ function togglePhone() {
   const phone = document.getElementById("phone");
   phone.style.display = (phone.style.display === "block") ? "none" : "block";
 }
+
+// Disable right-click globally
+document.addEventListener('keydown', function(e) {
+  if (
+    (e.ctrlKey && (e.key === 's' || e.key === 'S')) ||           // Ctrl+S
+    (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i')) || // Ctrl+Shift+I (DevTools)
+    (e.key === 'PrintScreen')                                     // Print screen key
+  ) {
+    e.preventDefault();
+    alert("This action is disabled.");
+  }
+});
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
