@@ -140,7 +140,8 @@ nav ul li a:hover {
   position: absolute;
   text-align: center;
   color: var(--light);
-  z-index: 1; /* Ensures that text is on top of the slideshow */
+  z-index: 1;
+  /* Ensures that text is on top of the slideshow */
   animation: fadeIn 2s ease-out;
 }
 
@@ -148,6 +149,7 @@ nav ul li a:hover {
   font-size: 3rem;
   margin-bottom: 1rem;
   background: linear-gradient(90deg, var(--primary), var(--secondary));
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -180,7 +182,8 @@ nav ul li a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0; /* Slideshow goes behind the text */
+  z-index: 0;
+  /* Slideshow goes behind the text */
   overflow: hidden;
 }
 
@@ -201,27 +204,57 @@ nav ul li a:hover {
 
 /* Slideshow Animation */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeOut {
-  from { opacity: 1; }
-  to { opacity: 0; }
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }
 
 /* --- RESPONSIVENESS --- */
 @media (max-width: 900px) {
-  .hero { height: 38vh; min-height: 240px; }
-  .slideshow-container { height: 100%; }
+  .hero {
+    height: 38vh;
+    min-height: 240px;
+  }
+
+  .slideshow-container {
+    height: 100%;
+  }
 }
+
 @media (max-width: 600px) {
-  .hero { height: 32vh; min-height: 170px; }
-  .slide img { min-height: 160px; }
+  .hero {
+    height: 32vh;
+    min-height: 170px;
+  }
+
+  .slide img {
+    min-height: 160px;
+  }
 }
+
 @media (max-width: 480px) {
-  .hero { height: 26vh; min-height: 130px; }
-  .slide img { min-height: 110px; }
+  .hero {
+    height: 26vh;
+    min-height: 130px;
+  }
+
+  .slide img {
+    min-height: 110px;
+  }
 }
 
 /* Optional: Add hover effect to icons if needed */
@@ -232,7 +265,8 @@ nav ul li a:hover {
 
 
 /* Navigation buttons (optional) */
-.prev, .next {
+.prev,
+.next {
   position: absolute;
   top: 50%;
   padding: 16px;
@@ -245,8 +279,13 @@ nav ul li a:hover {
   z-index: 2;
 }
 
-.prev { left: 0; }
-.next { right: 0; }
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
 
 .btn {
   display: inline-block;
@@ -399,12 +438,14 @@ section {
 
 .album-description.right {
   text-align: right;
-  order: 1; /* Make sure description goes on the right for odd albums */
+  order: 1;
+  /* Make sure description goes on the right for odd albums */
 }
 
 .album-description.left {
   text-align: left;
-  order: 2; /* Make sure description goes on the left for even albums */
+  order: 2;
+  /* Make sure description goes on the left for even albums */
 }
 
 /* Alternate Description Position */
@@ -550,7 +591,8 @@ footer p {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1rem;
-  justify-items: center; /* Centers the images */
+  justify-items: center;
+  /* Centers the images */
 }
 
 .album-photos img {
@@ -709,12 +751,12 @@ footer p {
 }
 
 img {
-  -webkit-user-drag: none;
-  user-drag: none;
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  pointer-events: none; /* Optional, disables clicks - may hurt UX */
+  -webkit-user-drag: none;
+  /* Keep for WebKit browsers */
+  pointer-events: none;
+  /* Optional, disables clicks - may hurt UX */
 }
-
